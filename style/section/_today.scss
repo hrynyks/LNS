@@ -1,0 +1,113 @@
+.today {
+    padding: 145px 0 0;
+
+    &__subline {
+        border-bottom: 2px solid $main-color;
+    }
+
+    &__title {
+        font-size: toRem(38);
+        font-weight: 500;
+        color: $dark-color;
+        margin-bottom: 80px;
+    }
+
+    &-wrap {
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 142px;
+
+        @include a (laptop) {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+    &__content {
+        padding-top: 20px;
+    }
+
+    &__descr {
+        font-size: toRem(24);
+        line-height: 30px;
+        color: $main-color;
+        max-width: 440px;
+        width: 100%;
+        padding-left: 180px;
+        margin-bottom: 150px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        &-1 {
+            position: relative;
+
+            &::before {
+                content: "";
+                position: absolute;
+                background: url(./../img/today-icon-1.svg) no-repeat center;
+                width: 77px;
+                height: 83px;
+                left: 0;
+                top: 50%;
+                transform: translateY(-50%);
+                border: 4px solid $main-color;
+                border-radius: 50%;
+                padding: 30px;
+            }
+        }
+
+        &-2 {
+            position: relative;
+
+            &::before {
+                content: "";
+                position: absolute;
+                background: url(./../img/today-icon-2.svg) no-repeat center;
+                width: 88px;
+                height: 75px;
+                left: 0;
+                top: 50%;
+                transform: translateY(-50%);
+                border: 4px solid $main-color;
+                border-radius: 50%;
+                padding: 30px;
+            }
+        }
+    }
+
+    &__images {
+        @include a (laptop) {
+            display: none;
+        }
+        &-wrap {
+            position: relative;
+            margin-bottom: 78px;
+        }
+
+        &-svg {
+            position: absolute;
+            right: -14px;
+            transform: translateY(-50%);
+        }
+
+        &-items {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+    }
+
+    &__line {
+        position: absolute;
+        width: 529px;
+        height: 248px;
+        border: 7px solid $main-color;
+        top: -48px;
+        right: -30px;
+        z-index: -1;
+    }
+
+
+}

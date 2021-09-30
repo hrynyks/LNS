@@ -1,0 +1,118 @@
+.hero {
+    background: url(./../img/arrow-btn.svg) no-repeat center bottom,
+        url(./../img/hero-bg.jpg) center/cover;
+    position: relative;
+    padding: 238px 0 99px;
+
+    &__wrap {
+        display: flex;
+        justify-content: space-between;
+        @include a (tablet-xl) {
+            flex-direction: column;
+            align-items: center;
+        }
+
+    }
+
+    &__content {
+        max-width: 724px;
+        width: 100%;
+        @include a (tablet-xl) {
+            margin-bottom: 20px;
+        }
+    }
+
+    &__title {
+        font-size: toRem(38);
+        line-height: 50px;
+        font-weight: 500;
+        color: $light-color;
+        margin-bottom: 25px;
+
+        &-line {
+            border-bottom: 3px solid $main-color;
+        }
+    }
+
+    &__subtitle {
+        font-size: toRem(24);
+        line-height: 25px;
+        font-weight: 500;
+        color: $light-color;
+        max-width: 550px;
+
+        &-line {
+            border-bottom: 2px solid $main-color;
+        }
+
+        &-bold {
+            font-weight: 700;
+        }
+    }
+
+    &__info {
+        max-width: 374px;
+        width: 100%;
+
+        &-title {
+            font-size: toRem(20);
+            font-weight: 500;
+            color: $light-color;
+            text-align: center;
+            background-color: $main-color;
+            padding: 20px 0;
+        }
+    }
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: 16px;
+        background-color: $light-color;
+        padding: 16px 0 29px;
+    }
+
+    &__input {
+        max-width: 277px;
+        width: 100%;
+        padding: 5px 0 5px 18px;
+        border: 1px solid #A6A6A6;
+        border-radius: 5px;
+
+        &:focus {
+            border-color: $main-color;
+        }
+
+        &::placeholder {
+            color: #A9A9A9;
+        }
+    }
+
+    &__btn {
+        max-width: 327px;
+        width: 100%;
+        min-height: 48px;
+        border-radius: 10px;
+        position: relative;
+
+        &::after {
+            content: "";
+            position: absolute;
+            background: url(./../../img/arrow-right.png);
+            width: 25px;
+            height: 16px;
+            right: 30px;
+        }
+    }
+
+    &__btn-next {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        border: none;
+        padding: 12px;
+        background-color: transparent;
+    }
+}

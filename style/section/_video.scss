@@ -1,0 +1,41 @@
+.video {
+    padding: 114px 0 145px;
+    &__title {
+        font-weight: 500;
+        font-size: toRem(38);
+        line-height: 50px;
+        max-width: 888px;
+        width: 100%;
+        margin-bottom: 87px;
+
+        &-line {
+            border-bottom: 3px solid $main-color;
+        }
+    }
+
+    &-wrap {
+        position: relative;
+    }
+
+    &__line {
+        border: 7px solid $main-color;
+        max-width: 875px;
+        width: 100%;
+        min-height: 100%;
+        position: absolute;
+        top: 34px;
+        left: 139px;
+
+        @include a (tablet-xl) {
+            display: none;
+        }
+    }
+
+    &__content {
+        background: #3F3F3F;
+        max-width: 960px;
+        width: 100%;
+        min-height: 381px;
+        position: relative;
+    }
+}

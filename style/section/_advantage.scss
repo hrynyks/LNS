@@ -1,0 +1,146 @@
+.advantage {
+    padding: 137px 0 144px;
+
+    &__content {
+        padding: 83px 306px 60px 25px;
+        background: url(./../img/advantages-bg.png) no-repeat left top, #3F3F3F;
+        position: relative;
+
+        @include a (tablet-xl) {
+            padding-right: 100px;
+        }
+    }
+
+    &__wave-1 {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        transform: translateY(50%);
+    }
+
+    &__wave-2 {
+        position: absolute;
+        right: 233px;
+        top: 0;
+        transform: translateY(-50%);
+    }
+
+    &__items {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        row-gap: 70px;
+        @include a (tablet-xl) {
+            grid-template-columns: 1fr 1fr;
+        }
+
+        @include a (tablet) {
+            grid-template-columns: 1fr;
+        }
+
+    }
+
+    &__item {
+        padding-top: 68px;
+        position: relative;
+
+        &-4 {
+            grid-column: 2/3;
+            @include a (tablet) {
+                grid-column: auto;
+            }
+        }
+
+        &-1::before {
+            content: "";
+            position: absolute;
+            background: url(./../../img/advantages-item-1.png) no-repeat;
+            top: 0;
+            left: 101px;
+            width: 51px;
+            height: 60px;
+        }
+
+        &-2::before {
+            content: "";
+            position: absolute;
+            background: url(./../../img/advantages-item-2.png) no-repeat;
+            top: 0;
+            left: 70px;
+            width: 51px;
+            height: 60px;
+        }
+
+        &-3::before {
+            content: "";
+            position: absolute;
+            background: url(./../../img/advantages-item-3.png) no-repeat;
+            top: 0;
+            left: 30px;
+            width: 51px;
+            height: 60px;
+        }
+
+        &-4::before {
+            content: "";
+            position: absolute;
+            background: url(./../../img/advantages-item-4.png) no-repeat;
+            top: 0;
+            left: 75px;
+            width: 51px;
+            height: 60px;
+        }
+
+        &-5::before {
+            content: "";
+            position: absolute;
+            background: url(./../../img/advantages-item-5.png) no-repeat;
+            top: 0;
+            left: 30px;
+            width: 51px;
+            height: 60px;
+        }
+    }
+
+
+    &__descr-1 {
+        font-family: 'Roboto', sans-serif;
+        font-weight: 500;
+        line-height: 28px;
+        color: $light-color;
+        margin-bottom: 15px;
+        height: 100px;
+        border-bottom: 2px solid $main-color;
+        padding: 0 17px;
+    }
+
+    &__descr-2 {
+        font-size: toRem(12);
+        font-weight: 500;
+        line-height: 15px;
+        color: $light-color;
+        padding: 0 17px;
+    }
+
+    &__image {
+        position: absolute;
+        right: -92px;
+        bottom: -90px;
+        @include a (tablet-xl) {
+            display: none;
+        }
+    }
+
+    &__img {
+        mix-blend-mode: luminosity;
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    }
+
+    &__span {
+        font-size: toRem(48);
+        color: $dark-color;
+        position: absolute;
+        bottom: 150px;
+        right: -150px;
+        transform: rotate(-90deg);
+    }
+}

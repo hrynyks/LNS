@@ -1,0 +1,72 @@
+.get {
+    padding: 136px 0 93px;
+    background: url(./../img/get-bg.jpg) no-repeat center/cover;
+    &-wrap {
+        display: flex;
+        justify-content: space-between;
+
+        @include a (tablet-xl) {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+    &__content {
+        max-width: 595px;
+    }
+
+    &__title {
+        font-size: toRem(38);
+        line-height: 45px;
+        font-weight: 500;
+
+        @include a (tablet-xl) {
+            margin-bottom: 40px;
+        }
+    }
+
+    &__more {
+        max-width: 374px;
+        width: 100%;
+        &-title {
+            font-size: toRem(20);
+            font-weight: 500;
+            color: $light-color;
+            text-align: center;
+            background-color: $main-color;
+            padding: 20px 0;
+        }
+    }
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: 16px;
+        background-color: $light-color;
+        padding: 16px 0 29px;
+    }
+
+    &__input {
+        max-width: 277px;
+        width: 100%;
+        padding: 5px 0 5px 18px;
+        border: 1px solid #A6A6A6;
+        border-radius: 5px;
+
+        &:focus {
+            border-color: $main-color;
+        }
+
+        &::placeholder {
+            color: #A9A9A9;
+        }
+    }
+
+    &__btn {
+        max-width: 327px;
+        width: 100%;
+        min-height: 48px;
+        border-radius: 10px;
+    }
+
+}

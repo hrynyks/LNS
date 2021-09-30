@@ -1,0 +1,45 @@
+.footer {
+    padding: 75px 0;
+    background-color: $main-color;
+
+    &-wrap {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        @include a (tablet) {
+            flex-direction: column;
+            align-items: center;
+            gap: 30px;
+        }
+    }
+
+    &__logo {
+        &-link {
+            font-family: 'Cremona', sans-serif;
+            font-size: toRem(36);
+            color: $light-color;
+            margin-left: -40px;
+        }
+    }
+
+    &__items {
+        display: flex;
+    }
+    &__item {
+        margin-right: 50px;
+        &-link {
+            font-weight: 500;
+            color: $light-color;
+        }
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+
+    &__social {
+        display: flex;
+        column-gap: 20px;
+    }
+
+}

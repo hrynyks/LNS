@@ -1,0 +1,47 @@
+.header {
+    position: absolute;
+    width: 100%;
+    top: 55px;
+    z-index: 1;
+    &__wrap {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        border-bottom: 2px solid $main-color;
+        padding-bottom: 19px;
+
+        @include a(tablet) {
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+        }
+    }
+
+    &__link {
+        font-family: 'Cremona', sans-serif;
+        font-size: toRem(36);
+        color: $light-color;
+    }
+
+    &__img {
+        margin: 0 -30px -15px 0;
+    }
+
+    &__items {
+        display: flex;
+        column-gap: 60px;
+    }
+
+    &__item {
+        font-weight: 500;
+    }
+
+    &__links {
+        color: $light-color;
+    }
+
+    &__btn {
+        width: 225px;
+        height: 50px;
+    }
+}
